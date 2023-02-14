@@ -1,0 +1,47 @@
+float x= 120, y=150;
+void setup() {
+  background(#F7759F);
+  fullScreen(2);   //presentar contenido usando la pantalla completa
+}
+
+void draw() {
+  background(#F7759F);
+  if (keyPressed && key == 'r') { //if (condición) (si) y una condición, condicional para una sentencia
+    fill(#5A73F0);
+    rect(120, 150, 280, 200, 28);
+  }else{  //(sino) instrucciones que le voy a dar al programa
+    if (keyPressed && key == 'c') {
+      fill(#F09046);
+      ellipse(width/2, height/2, 200, 200);
+    }else if (keyPressed && key == 'b') { //else if (sino, si) tiene que cumplir la condición
+      background(255);
+      fill(255);
+      ellipse(width/2, height/2, 200, 200);
+    }else{
+      if (keyPressed && key == 'a') { 
+        int R = (int)random(0,255); 
+        int G = (int)random(0,255); 
+        int B = (int)random(0,255);
+        fill(R, G, B);
+        triangle(120, 300, 232, 80, 344, 300);
+      }else{
+        background(#E8D4FC);
+        rect(x, y, 280, 200, 28);
+        fill(#DB0BB9);
+      }
+    }
+  }
+  
+  
+}
+
+void keyPressed() {
+  // es un evento que ocurre cuando se presiona una tecla
+    //keyCode sirve para identificar las teclas que no son de texto 
+          if( keyCode == 38) y-=20;// arriba admite UP el 10 es para que se mueva más rápido y se le rsta a la coordenada       
+          if (keyCode == 40) y+=20; // abajo, admite DOWN se le suma a la coordenada    
+          if (keyCode == 39) x+=20; // derecha, admite RIGHT se suma para que se mueva en la coordenada  
+          if (keyCode == 37) x-=20;// izquierda, admite LEFT se resta
+            
+ 
+}
